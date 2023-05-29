@@ -34,3 +34,22 @@ nav {
 .page-footer {
   padding-top: 0;
 }
+
+.quantity {
+
+}
+
+.basket {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+}
+@media (min-width: 767px) {
+  .basket {
+    top: 5rem;
+    bottom: unset;
+  }
+}
