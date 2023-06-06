@@ -4,6 +4,7 @@ import { API_URL } from "../config";
 import { Preloader } from "./Preloader";
 import { GoodsList } from "./GoodsList";
 import { Basket } from "./Basket";
+import { BasketList } from "./BasketList";
 
 //const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -62,6 +63,7 @@ function Shop() {
     <main className="container content">
       <Basket quantity={order.length} handleBasketShow={handleBasketShow} />
       {loading ? <Preloader /> : <GoodsList goods={goods} addToBasket={addToBasket} />}
+      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} />}
     </main>
   );
 }
