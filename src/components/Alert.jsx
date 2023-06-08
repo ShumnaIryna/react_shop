@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function Alert(props) {
   const { name = "", closeAlert = Function.prototype } = props;
@@ -9,6 +9,7 @@ function Alert(props) {
     return () => {
       clearTimeout(timerId);
     };
+    // eslint-disabled-next-line
   }, [name]);
 
   return (
